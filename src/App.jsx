@@ -7,7 +7,7 @@ import {
   FaMoon,
   FaSun,
   FaPlus,
-  FaBroom
+  FaBroom,
 } from "react-icons/fa";
 
 export default function App() {
@@ -28,15 +28,10 @@ export default function App() {
     let newTodos;
 
     if (editId) {
-      newTodos = todos.map(t =>
-        t.id === editId ? { ...t, text: todo } : t
-      );
+      newTodos = todos.map((t) => (t.id === editId ? { ...t, text: todo } : t));
       setEditId(null);
     } else {
-      newTodos = [
-        ...todos,
-        { id: Date.now(), text: todo, completed: false }
-      ];
+      newTodos = [...todos, { id: Date.now(), text: todo, completed: false }];
     }
 
     setTodos(newTodos);
@@ -45,14 +40,14 @@ export default function App() {
   };
 
   const deleteTodo = (id) => {
-    const newTodos = todos.filter(t => t.id !== id);
+    const newTodos = todos.filter((t) => t.id !== id);
     setTodos(newTodos);
     saveTodos(newTodos);
   };
 
   const toggleComplete = (id) => {
-    const newTodos = todos.map(t =>
-      t.id === id ? { ...t, completed: !t.completed } : t
+    const newTodos = todos.map((t) =>
+      t.id === id ? { ...t, completed: !t.completed } : t,
     );
     setTodos(newTodos);
     saveTodos(newTodos);
@@ -77,10 +72,14 @@ export default function App() {
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
       <div className="p-4 w-[320px] h-100 bg-white dark:bg-zinc-900 text-black dark:text-white font-sans">
-
+        
         {/* Header */}
         <div className="flex justify-between items-center mb-3">
-          <h1 className="text-lg font-bold">Todo List</h1>
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="Todo Logo" className="w-7 h-7" />
+            <span className="text-lg font-bold">Todo</span>
+          </div>
+
           <button onClick={toggleTheme}>
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
@@ -114,7 +113,7 @@ export default function App() {
 
         {/* Todo list */}
         <ul className="space-y-2 overflow-y-auto max-h-65">
-          {todos.map(t => (
+          {todos.map((t) => (
             <li
               key={t.id}
               className="flex justify-between items-center border dark:border-zinc-700 p-2 rounded"
@@ -143,9 +142,7 @@ export default function App() {
           ))}
 
           {todos.length === 0 && (
-            <p className="text-center text-gray-400 text-sm">
-              No todos yet
-            </p>
+            <p className="text-center text-gray-400 text-sm">No todos yet</p>
           )}
         </ul>
       </div>
