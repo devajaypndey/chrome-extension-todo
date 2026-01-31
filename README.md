@@ -1,9 +1,19 @@
-# ✅ Todo Chrome Extension (React + Vite)
+#  Todo Chrome Extension
+
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-fast-purple)
+![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green)
 
 A clean and minimal **Todo Chrome Extension** built using **React, Vite, Tailwind CSS**, and **Chrome Storage API**.  
 This extension helps users manage daily tasks directly from the browser toolbar with persistent storage and dark mode support.
 
+## 📸 Screenshots
+
+![Todo Chrome Extension](./src/screenshot/preview.png)
+
+
 ---
+
 
 ## 🚀 Features
 
@@ -12,7 +22,6 @@ This extension helps users manage daily tasks directly from the browser toolbar 
 - ✅ Mark todos as completed
 - 🗑️ Delete individual todos
 - 🧹 Clear all todos at once
-- 🌙 Dark mode (persisted)
 - 💾 Data stored locally using Chrome Storage API
 - ⚡ Built with React + Vite for fast performance
 - 🎨 Styled with Tailwind CSS
@@ -33,29 +42,31 @@ This extension helps users manage daily tasks directly from the browser toolbar 
 
 ## 📁 Project Structure
 
+```text
 todo-extension/
 ├── public/
-│ ├── manifest.json
-│ └── logo.png
+│   ├── manifest.json
+│   └── logo.png
 ├── src/
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── index.css
-│ └── utils/storage.js
-├── dist/ # Production build (generated)
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── utils/
+│       └── storage.js
+├── dist/           
 ├── index.html
-├── tailwind.config.js
 ├── vite.config.js
 └── package.json
+```
 
 
 ---
 
 ## 🛠️ Local Development
 
-### 1️⃣ Clone the repository
+### Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/devajaypndey/chrome-extension-todo.git>
 cd todo-extension
 npm install
 npm run dev
