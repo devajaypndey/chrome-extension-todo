@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
       <div className="p-4 w-[320px] h-100 bg-white dark:bg-zinc-900 text-black dark:text-white font-sans">
-        
+
         {/* Header */}
         <div className="flex justify-between items-center mb-3">
           <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ export default function App() {
           />
           <button
             onClick={addOrUpdateTodo}
-            className="bg-black dark:bg-white dark:text-black text-white px-3 rounded"
+            className="bg-black dark:bg-white dark:text-black text-white px-3 rounded cursor-pointer"
           >
             <FaPlus />
           </button>
@@ -129,13 +129,13 @@ export default function App() {
 
               <div className="flex gap-2 text-sm">
                 <button onClick={() => toggleComplete(t.id)}>
-                  <FaCheck className="text-green-500" />
+                  <FaCheck className="text-green-500 cursor-pointer" />
                 </button>
                 <button onClick={() => startEdit(t)}>
-                  <FaEdit className="text-blue-500" />
+                  <FaEdit className="text-blue-500 cursor-pointer" />
                 </button>
                 <button onClick={() => deleteTodo(t.id)}>
-                  <FaTrash className="text-red-500" />
+                  <FaTrash className="text-red-500 cursor-pointer" />
                 </button>
               </div>
             </li>
