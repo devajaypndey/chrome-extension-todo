@@ -71,3 +71,18 @@ cd todo-extension
 npm install
 npm run dev
 ```
+
+### Build for Chrome Extension
+```bash
+npm run build
+```
+
+### Install Extension in Chrome (Without Chrome Web Store)
+1. Open Google Chrome and go to: **chrome://extensions**
+
+2. Enable **Developer Mode**
+
+3. Click **Load unpacked**
+
+4. Select the **dist/** folder
+
