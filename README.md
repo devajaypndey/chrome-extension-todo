@@ -25,7 +25,6 @@ This extension helps users manage daily tasks directly from the browser toolbar 
 - 💾 Data stored locally using Chrome Storage API
 - ⚡ Built with React + Vite for fast performance
 - 🎨 Styled with Tailwind CSS
-- 🎯 Uses React Icons for clean UI
 
 ---
 
